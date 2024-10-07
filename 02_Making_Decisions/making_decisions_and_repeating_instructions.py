@@ -12,11 +12,14 @@ def all_numbers():
     '0 1 4'
     """
 
-    num1 = int(input())
-    num2 = int(input())
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
 
-    #enter your code here
-
+    
+    for i in range(0, 5):
+        if i == num1 or i == num2:
+            continue
+        print(i)
 
 def dog_years():
     """
@@ -31,8 +34,7 @@ def dog_years():
     """
 
     h_age = int(input("Input a dog's age in human years: \n"))
-
-    #enter your code here
+    print(int(h_age * 4.9))
 
 
 
@@ -49,7 +51,10 @@ def consonant_or_vowel():
 
     l = input("Input a letter of the alphabet: ")
 
-    #enter your code here
+    if l in "aeiou":
+        print(f"{l} is a vowel")
+    else:
+        print(f"{l} is a consonant")
 
 
 def month_numbers():
@@ -67,7 +72,12 @@ def month_numbers():
     print("List of months: January, February, March, April, May, June, July, August, September, October, November, December")
     month_name = input("Input the name of Month: ")
 
-    #enter your code here
+    if month_name == "February":
+        print("No. of days: 28/29 days")
+    elif month_name in "January March May July August October December":
+        print("No. of days: 31 days")
+    else:
+        print("No. of days: 30 days")
 
 
 def pyramids():
@@ -88,14 +98,12 @@ def pyramids():
     rows = int(input())
     for i in range(0, rows):
         for j in range(0, i + 1):
-            #enter your code here
-            None
+            print("@" * j)
         print("\r")
 
     for i in range(rows, 0, -1):
         for j in range(0, i - 1):
-            #enter your code here
-            None
+            print("@" * j)
         print("\r")
 
 
@@ -149,5 +157,5 @@ if __name__ == "__main__":
     # dog_years()
     # consonant_or_vowel()
     # month_numbers()
-    # pyramids()
+    pyramids()
     # fibonacci()
