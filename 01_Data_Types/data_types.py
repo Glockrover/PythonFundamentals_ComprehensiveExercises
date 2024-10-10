@@ -19,7 +19,7 @@ def integer():
     num1 = int(input("Enter first number\n"))
     num2 = int(input("Enter second number\n"))
 
-    print(num1 * num2)
+    print(f"The product is {num1 * num2}")
 
 
 def string():
@@ -63,7 +63,7 @@ def all_data_types():
     int_year = 2023
     float_cost = 0.00
 
-    print(f"{string_one} {int_year} {string_two} where {bool_condition} {string_3}{float_cost}")
+    print(f"{string_one}{int_year}{string_two}{bool_condition}{string_3}{float_cost:.2f}")
 
 
 if __name__ == "__main__":
